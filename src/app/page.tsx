@@ -1,7 +1,26 @@
+import Image from "next/image";
+import styles from "./home.module.css";
+
 export default function Home() {
   return (
-    <div>
-      <p>Homepage</p>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h1 className={styles.title}>Creative Thoughts Agency</h1>
+        <p className={styles.desc}>
+          We are a creative agency that focuses on creating the best digital
+          solutions for our clients.
+        </p>
+        <div className={styles.buttonsContainer}>
+          <button className={styles.button}>Learn More</button>
+          <button className={styles.button}>Contact</button>
+        </div>
+        <div className={styles.brands}>
+          <Image src="/brands.png" alt="" fill className={styles.brandImg} />
+        </div>
+      </div>
+      <div className={styles.imgContainer}>
+        <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
+      </div>
     </div>
   );
 }
